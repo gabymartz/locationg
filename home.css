@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d1b3ff; 
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-box {
+    background-color: #ffffff; 
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #6a1b9a; 
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+button#get-location-btn {
+    background-color: #8e24aa; 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button#get-location-btn:hover {
+    background-color: #6a1b9a; 
+}
+
+#display-coords {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+#display-coords p {
+    font-size: 1.1rem;
+    color: #4a148c;
+    margin: 5px 0;
+    font-weight: bold;
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Location Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="card-box">
+        <h2 id="map-title">Geo Data</h2>
+
+        <button id="get-location-btn">Obtener Ubicación</button>
+
+        <div id="display-coords">
+            <p id="latitude">Latitud:</p>
+            <p id="longitude">Longitud:</p>
+        </div>
+    </div>
+
+    <script>
+        function success(pos) {
+            const coords = pos.coords;
+            document.getElementById('latitude').innerText = 'Latitud: ' + coords.latitude;
+            document.getElementById('longitude').innerText = 'Longitud: ' + coords.longitude;
+        }
+
+        function error(err) {
+            alert('Error al obtener ubicación: ' + err.message);
+        }
+
+        document.getElementById('get-location-btn').addEventListener('click', function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(success, error);
+            } else {
+                alert('Geolocalización no soportada');
+            }
+        });
+    </script>
+</body>
+</html>
